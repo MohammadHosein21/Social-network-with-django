@@ -16,25 +16,29 @@ body {
     margin-top: 5px !important;
 }
 
-.mymodal{
+.mymodal {
     height: 300px !important;
     top: 200px !important;
     font-size: 20px !important;
 }
 
-.mb-5{
+.mb-5 {
     margin-bottom: 5px !important;
 }
 
-.bwhite-lg{
+.bwhite-lg {
     background-color: transparent !important;
 }
 
-.bwhite-sm{
+.bwhite-sm {
     background-color: transparent !important;
     width: 10px !important;
 }
 
-.comment-box{
+.comment-box {
     display: none;
+}
+
+.w-big {
+    width: 200px !important;
 }
