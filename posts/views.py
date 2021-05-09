@@ -4,6 +4,7 @@ from .models import Post, Profile, Like
 from .forms import PostModelForm, CommentModelForm
 from django.views.generic import UpdateView, DeleteView
 from django.contrib import messages
+from django.http import JsonResponse
 
 
 # Create your views here.
@@ -70,6 +71,11 @@ def like_unlike_post(request):
         post_obj.save()
         like.save()
 
+        date = {
+            'value': like.value,
+            'likes': post_obj.liked.all().count(),
+        }
+        return JsonResponse(date, safe=False)
     return redirect('posts:main-post-view')
 
 
